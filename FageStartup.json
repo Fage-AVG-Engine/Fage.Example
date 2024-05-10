@@ -1,0 +1,26 @@
+{
+    "FageStartup": {
+        "SplashScreen": {
+            "SplashOptions": {
+                "FadeOutSeconds": 1.6,
+                "DefaultImageDurationSeconds": 5.0,
+                "FadeInSeconds": 1.6,
+                "InterludeSeconds": 0.6
+            },
+            "SplashScreenItems": [
+                {
+                    "Type": "Image", /* "Image"或"Video" */
+                    "ResourceName": "Splash/fage", /* 资源文件相对于资源根目录的路径 */
+                    "Duration": "00:00:03.0" /* 格式是：时:分:秒.秒的小数部分，必须是英文标点 */
+                }
+            ]
+        },
+        "TitleScreen": {
+            "NewGame": {
+                "InitialScript": "demonstration2"
+            },
+			"TitleBackgroundTextureName": "demo-title-background"
+        },
+        "GenericFontFamilyFileNames": [ "LXGWNeoXiHei.ttf" ]
+    }
+}

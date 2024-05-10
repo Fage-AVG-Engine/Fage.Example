@@ -1,0 +1,301 @@
+{
+  "InstructionSetVersion": "0.1.0",
+  "FormatVersion": 0,
+  "ScriptEncoding": "DebugJson",
+  "InstructionEncodingVersion": "1.0.0",
+  "InstructionSequence": [
+    {
+      "Opcode": "Anchor",
+      "InstantizationInfo": {
+        "Name": "c1",
+        "HeadingText": "c1"
+      }
+    },
+    {
+      "Opcode": "SetBackground",
+      "InstantizationInfo": {
+        "Name": "Background"
+      }
+    },
+    {
+      "Opcode": "SetBgm",
+      "InstantizationInfo": {
+        "Name": "just-relax-11157"
+      }
+    },
+    {
+      "Opcode": "Code",
+      "InstantizationInfo": {
+        "IsBlock": true,
+        "Content": "-- pre-initialization\r\n",
+        "LineNumber": 7,
+        "Span": {
+          "Item1": 68,
+          "Item2": 108
+        }
+      }
+    },
+    {
+      "Opcode": "Anchor",
+      "InstantizationInfo": {
+        "Name": "loop-c1",
+        "HeadingText": "loop-c1"
+      }
+    },
+    {
+      "Opcode": "AddCharacter",
+      "InstantizationInfo": {
+        "Identity": "zhang3",
+        "Motion": null,
+        "Position": null
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "StartVoice",
+      "InstantizationInfo": {
+        "Name": "Voice/Fa/c1m1_1"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "As you can see",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "AddCharacter",
+      "InstantizationInfo": {
+        "Identity": "li4",
+        "Motion": null,
+        "Position": null
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "StartVoice",
+      "InstantizationInfo": {
+        "Name": "Voice/Fa/c1m1_2"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "步入大四的Fa鸽，"
+      }
+    },
+    {
+      "Opcode": "StartVoice",
+      "InstantizationInfo": {
+        "Name": "Voice/Fa/c1m1_3"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "选择了视觉小说作为毕业设计的主题。",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "后面的部分就不配音了，因为修音挺麻烦的",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "前面演示的功能包括背景切换，角色形象操作，"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "文本组件控制，背景音乐播放，配音播放",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "RemoveCharacter",
+      "InstantizationInfo": {
+        "Identity": "zhang3",
+        "TryUnloadResources": false
+      }
+    },
+    {
+      "Opcode": "RemoveCharacter",
+      "InstantizationInfo": {
+        "Identity": "li4",
+        "TryUnloadResources": false
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "接下来展示分支选项，"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "用视觉小说的特色给在场的教授们带来笑容",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "Branch",
+      "InstantizationInfo": {
+        "Options": [
+          {
+            "HintText": "再看一遍前面的部分",
+            "AnchorExpression": "loop-c1",
+            "Code": null
+          },
+          {
+            "HintText": "结束演示",
+            "AnchorExpression": null,
+            "Code": null
+          }
+        ]
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "我将顺利毕业的概率是：",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "Branch",
+      "InstantizationInfo": {
+        "Options": [
+          {
+            "HintText": "0",
+            "AnchorExpression": "percent0",
+            "Code": null
+          },
+          {
+            "HintText": "1000%",
+            "AnchorExpression": "percent1000",
+            "Code": null
+          }
+        ]
+      }
+    },
+    {
+      "Opcode": "Anchor",
+      "InstantizationInfo": {
+        "Name": "percent0",
+        "HeadingText": "percent0"
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "啊这……"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "杂技表演到此结束，感谢各位答辩教授。",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "ReturnToTitle",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Anchor",
+      "InstantizationInfo": {
+        "Name": "percent1000",
+        "HeadingText": "percent1000"
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "StartVoice",
+      "InstantizationInfo": {
+        "Name": "Voice/DarkCarrot/percent1000"
+      }
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "1000%!",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "感谢各位答辩教授，功能演示到此结束。",
+        "CompletesParagraph": true
+      }
+    },
+    {
+      "Opcode": "ReturnToTitle",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "ParagraphStart",
+      "InstantizationInfo": {}
+    },
+    {
+      "Opcode": "Dialogue",
+      "InstantizationInfo": {
+        "Content": "1#1 "
+      }
+    },
+    {
+      "Opcode": "Code",
+      "InstantizationInfo": {
+        "IsBlock": false,
+        "Content": "1232121",
+        "LineNumber": 62,
+        "Span": {
+          "Item1": 679,
+          "Item2": 687
+        }
+      }
+    }
+  ]
+}

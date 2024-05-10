@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <!-- osu都开，那我也跟风开一下 -->
+    <TieredCompilation>true</TieredCompilation>
+    <Configurations>Debug;Release</Configurations>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);MONOGAME;MONOGAME_WINDOWSDX</DefineConstants>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GeneratePlantUml|AnyCPU'">
+    <DefineConstants>$(DefineConstants);GENERATE_PLANTUML</DefineConstants>
+  </PropertyGroup>
+  <!--
+ <PropertyGroup>
+		<PlantUmlGenerator_OutputDir>$(SolutionDir)bin\puml</PlantUmlGenerator_OutputDir>
+		<PlantUmlGenerator_AttributeRequierd>false</PlantUmlGenerator_AttributeRequierd>
+		<PlantUmlGenerator_IncludeMemberAccessibilities>Public,Protected,ProtectedInternal</PlantUmlGenerator_IncludeMemberAccessibilities>
+		<PlantUmlGenerator_ExcludeMemberAccessibilities>Private,PrivateInternal</PlantUmlGenerator_ExcludeMemberAccessibilities>
+	</PropertyGroup>
+	<ItemGroup>
+		<CompilerVisibleProperty Include="PlantUmlGenerator_OutputDir" />
+		<CompilerVisibleProperty Include="PlantUmlGenerator_AttributeRequierd" />
+		<CompilerVisibleProperty Include="PlantUmlGenerator_IncludeMemberAccessibilities" />
+		<CompilerVisibleProperty Include="PlantUmlGenerator_ExcludeMemberAccessibilities" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="PlantUmlClassDiagramGenerator.SourceGenerator" Version="0.5.1-beta" PrivateAssets="all" />
+	</ItemGroup>
+	-->
+  <ItemGroup>
+    <None Remove="Content\LXGWNeoXiHei.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FageScript\Fage.Script\Fage.Script.csproj" />
+    <ProjectReference Include="..\Fage\Fage.Runtime\Fage.Runtime.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\LXGWNeoXiHei.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FageStartup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Scripts\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties fagestartup_1json__JsonSchema="..\Fage.JsonSchema\startup-definition.schema.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

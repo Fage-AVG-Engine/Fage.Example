@@ -1,0 +1,57 @@
+{
+    "InstructionSetVersion": "0.1.0",
+    "FormatVersion": 0,
+    "ScriptEncoding": "DebugJson",
+    "InstructionEncodingVersion": "1.0.0",
+    "InstructionSequence": [
+        {
+            "Opcode": "SetBackground",
+            "InstantizationInfo": {
+                "Name": "Background"
+            }
+        },
+        {
+            "Opcode": "Anchor",
+            "InstantizationInfo": {
+                "Name": "loop-c1",
+                "HeadingText": null
+            }
+        },
+        {
+            "Opcode": "ParagraphStart",
+            "InstantizationInfo": {}
+        },
+        {
+            "Opcode": "Dialogue",
+            "InstantizationInfo": {
+                "Content": "As you can see，"
+            }
+        },
+        {
+            "Opcode": "Dialogue",
+            "InstantizationInfo": {
+                "Content": "泰伦市长",
+                "CompletesParagraph": true
+            }
+        },
+        {
+            "Opcode": "Branch",
+            "InstantizationInfo": {
+                "Options": [
+                    {
+                        "HintText": "再看一遍",
+                        "AnchorExpression": "loop-c1 brtest"
+                    },
+                    {
+                        "HintText": "结束"
+                    }
+                ]
+            }
+        },
+        {
+            "Opcode": "ReturnToTitle",
+            "InstantizationInfo": {
+            }
+        }
+    ]
+}
